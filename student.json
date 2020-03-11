@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "name": "Manoj",
+      "LastName": "Dakuwa",
+      "Email": "dakuwamanoj888@gmail.com",
+      "Password": "123",
+      "Locked": "Lo",
+      "Active": "InAct",
+      "id": "1"
+    },
+    {
+      "name": "Abh",
+      "LastName": "Abh",
+      "Email": "Abhi@gmail.com",
+      "Password": "123",
+      "Locked": "Lo",
+      "Active": "Act",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Karan",
+      "LastName": "D",
+      "Email": "Karan@gmail.com",
+      "Password": "123",
+      "Locked": "Un",
+      "Active": "Act"
+    },
+    {
+      "id": "4",
+      "name": "Rajesh",
+      "LastName": "A",
+      "Email": "Rajesh@gmail.com",
+      "Password": "123",
+      "Locked": "Lo",
+      "Active": "InAct"
+    },
+    {
+      "id": "5",
+      "name": "Reshma",
+      "LastName": "K",
+      "Email": "Reshma@gmail.com",
+      "Password": "123",
+      "Locked": "Un",
+      "Active": "InAct"
+    },
+    {
+      "name": "Nicolas",
+      "LastName": "Abrhama",
+      "Email": "nicolas@gmail.com",
+      "Password": "235",
+      "Locked": "Un",
+      "Active": "Act",
+      "id": "QVd7LPV"
+    },
+    {
+      "name": "Krrish",
+      "LastName": "Superhero",
+      "Email": "Krrish@gmail.com",
+      "Password": "Krrish",
+      "Locked": "Lo",
+      "Active": "Act",
+      "id": "W81f1Te"
+    },
+    {
+      "name": "Iron Man",
+      "LastName": "Avenger",
+      "Email": "Iron@gmail.com",
+      "Password": "1234",
+      "Locked": "Lo",
+      "Active": "Act",
+      "id": "Ah7QGKd"
+    }
+  ]
+}

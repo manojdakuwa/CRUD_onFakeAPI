@@ -1,0 +1,120 @@
+<div class="formTableWrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form [formGroup]='RegisterLoginForm' (ngSubmit)='onSubmit()'>
+                    <div class="formWrap pt-5 pb-5">
+                        <div class="title">
+                            <h4>Register Form</h4>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="formGroupCus">
+                                        <label >First Name</label>
+                                        <input type="text" formControlName="FirstName" class="formControlCus" placeholder="" [ngClass]="{ 'is-invalid': submitted && f.FirstName.errors }" >
+                                        <div *ngIf="submitted && f.FirstName.errors" class="text-danger">
+                                            <div *ngIf="f.FirstName.errors.required">First Name is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formGroupCus">
+                                        <label>Last Name</label>
+                                        <input type="text" formControlName="LastName" class="formControlCus" placeholder="" [ngClass]="{ 'is-invalid': submitted && f.LastName.errors }">
+                                        <div *ngIf="submitted && f.LastName.errors" class="text-danger">
+                                            <div *ngIf="f.LastName.errors.required">Last Name is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="formGroupCus">
+                                        <label>Email</label>
+                                        <input type="email" formControlName="Email" class="formControlCus" placeholder="" [ngClass]="{ 'is-invalid': submitted && f.Email.errors }">
+                                        <div *ngIf="submitted && f.Email.errors" class="text-danger">
+                                            <div *ngIf="f.Email.errors.required">Email is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="formGroupCus">
+                                        <label>Password</label>
+                                        <input type="password" formControlName="Password" class="formControlCus" placeholder="" [ngClass]="{ 'is-invalid': submitted && f.Password.errors }">
+                                        <div *ngIf="submitted && f.Password.errors" class="text-danger">
+                                            <div *ngIf="f.Password.errors.required">Password is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="d-block mb-3" [ngClass]="{ 'is-invalid': submitted && f.Active.errors }">
+                                        <div class="d-inline align-middle m-0 pr-4 customCheckWrap">
+                                            <input type="radio" formControlName="Active" name="Active" id="active" class="largerCheckbox align-middle m-0"  value="Act" />
+                                            <label for="active" class="m-0 d-inline align-middle">Active</label>
+                                        </div>
+                                        <div class="d-inline align-middle pr-4 m-0 customCheckWrap">
+                                            <input type="radio" formControlName="Active" name="Active" id="inactive" class="largerCheckbox m-0" value="InAct" />
+                                            <label for="inactive" class="m-0 d-inline align-middle">Inactive</label>  
+                                        </div>
+                                        <div *ngIf="submitted && f.Active.errors" class="text-danger">
+                                            <div *ngIf="f.Active.errors.required">Active / Inactive is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="d-block mb-3" [ngClass]="{ 'is-invalid': submitted && f.Locked.errors }">
+                                        <div class="d-inline align-middle m-0 pr-4 customCheckWrap">
+                                            <input type="radio" formControlName="Locked" name="Locked" id="Locked" class="largerCheckbox align-middle m-0" value="Lo" />
+                                            <label for="Locked" class="m-0 d-inline align-middle">Locked</label>
+                                        </div>
+                                        <div class="d-inline align-middle pr-4 m-0 customCheckWrap">
+                                            <input type="radio" formControlName="Locked" name="Locked" id="Unlocked" class="largerCheckbox m-0" value="Un"/>
+                                            <label for="Unlocked" class="m-0 d-inline align-middle">Unlocked</label>  
+                                        </div>
+                                        <div *ngIf="submitted && f.Locked.errors" class="text-danger">
+                                            <div *ngIf="f.Locked.errors.required">Active / Inactive is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input class="custSubmitButn" *ngIf="!upHide" placeholder="" type="submit" >
+                                    <button class="custSubmitButn" *ngIf="upHide" placeholder="" type="button" value="Update" (click)="Update()">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="table-responsive pt-5">
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Active/InActive</th>
+                            <th scope="col">Locked/UnLocked</th>
+                            <th scope="col">Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let student of students; let i= index;">
+                            <th scope="row">{{i + 1}}</th>
+                            <td>{{student.name}}</td>
+                            <td>{{student.LastName}}</td>
+                            <td>{{student.Email}}</td>
+                            <td>{{student.Password}}</td>
+                            <td>{{student.Active}}</td>
+                            <td>{{student.Locked}}</td>
+                            <td><button type="submit" class="fa fa-eye" (click)="Edit(student)"></button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                

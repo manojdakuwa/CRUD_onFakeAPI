@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";  
+
+
+/*====================SET: NEW FORM STYLE====================*/
+form { background-color: #ffffff; }
+/*-----Set: Form title styles-----*/
+.title { text-align: center; margin-bottom: 30px; }
+.title h4 { font-size: 28px; margin-bottom: 0px; }
+.title p { font-size: 14px; margin-bottom: 0px; color: #999999; }
+/*-----End: Form title styles-----*/
+/*-----Set: Upload Field styles-----*/
+.formGroupUpload.formGroupCus input { display: inline-block; padding: 0px; }
+/*-----End: Upload Field styles-----*/
+/*-----Set: Input Box styles-----*/
+.formGroupCus input, .formGroupCus select { border: 1px solid #ebebeb; transition: all 0.5s ease 0s; }
+.formGroupCus input:focus, .formGroupCus select:focus { border: 1px solid #012842; outline: none; }
+.formGroupCus { display: block; margin-bottom: 10px; }
+.formGroupCus label { display: block; margin-bottom: 0px; font-weight: 400; font-size: 14px;}
+.formGroupCus input { padding: 0px 10px; }
+.formGroupCus input, .formGroupCus select { display: block; width: 100%; height: 25px; }
+.custSubmitButn { background-color: #e72122; color: #ffffff; border: 2px solid #e72122; font-size: 14px; padding: 4px 15px; -webkit-transition: .3s ease-in; -moz-transition: .3s ease-in; -ms-transition: .3s ease-in; -o-transition: .3s ease-in; transition: .3s ease-in; margin-bottom: 10px; }
+.custSubmitButn:hover { background-color: transparent; color: #e72122; }
+/*-----End: Input Box styles-----*/
+/*-----Set: Radio styles-----*/
+.customCheckWrap input[type="radio"] {
+    display: none;
+}
+.customCheckWrap input[type="radio"] + label { line-height: 22px; padding: 2px 0px 2px 25px; display: block; position: relative; padding-left: 25px; margin-bottom: 20px; font-size: 14px; font-family: 'Open Sans', Arial, sans-serif; color: #000000; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+.customCheckWrap input[type="radio"] + label:last-child { margin-bottom: 0; }
+.customCheckWrap input[type="radio"] + label:before { content: ''; display: block; width: 20px; height: 20px; border: 1px solid #000000; position: absolute; left: 0; top: 0; -webkit-transition: all .12s, border-color .08s; transition: all .12s, border-color .08s; }
+.customCheckWrap input[type="radio"]:checked + label:before { width: 10px; top: -5px; left: 5px; border-radius: 0; opacity: 1; border-top-color: transparent; border-left-color: transparent; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+/*-----Set: Radio styles-----*/
+
+#divCheckMode { margin-bottom: 10px; }
+/*====================SET: NEW FORM STYLE====================*/
